@@ -1,0 +1,24 @@
+.select select {
+    border: 2px solid #422800;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    cursor: pointer;
+    background-color: #f9f9f9
+}
+
+.select label{
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-right: 2rem;
+    color:#422800 ;
+}
+
