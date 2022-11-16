@@ -24,7 +24,7 @@ const ContainerFilter = () => {
               </div>
             </div>
             <div>
-              <h4>Order</h4>
+              <h4>Sort</h4>
               <div>
                 <FilterByAttack/>
                 <FilterByAlphabet/>

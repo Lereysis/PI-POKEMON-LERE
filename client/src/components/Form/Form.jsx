@@ -38,6 +38,10 @@ export default function Form () {
                 ...state,
                 types: [...state.types, {name:e.target.value}]
             });
+            setErrors(validate({                 
+                ...state,
+                types: [...state.types, {name:e.target.value}]
+            }));
     }
     function filterTypes(e) {
         setState({
@@ -56,7 +60,7 @@ export default function Form () {
                 || errors.weight !== undefined 
                 || errors.types !== undefined 
         )  {
-           
+            console.log("1")
             return alert("Sorry, all fields are required");
         } else if (state.name === "" 
             || state.life === "" 
@@ -67,7 +71,7 @@ export default function Form () {
             || state.weight === ""
             || state.types.length === 0
              ) {
-            
+                console.log("2")
             return alert("Sorry, all fields are required");
         } else {
   
