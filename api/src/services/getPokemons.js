@@ -11,7 +11,7 @@ const getAllPokemons = async () => {
         })
         let result = []
         result = await Promise.all(allUrlPokemon)
-         return result
+        return result
     } catch (error) {
         throw new Error("Oops! :(")
     }

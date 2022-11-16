@@ -4,7 +4,7 @@ const getPokemons = require('../services/getPokemons')
 const getPokemonsDB = require('../services/getPokemonsDB')
 const joinResponsePokemons = require("../helpers/joinResponsePokemons")
 
-router.get("/", async (req,res) => {
+router.get("/", async (req,res,next) => {
     const { name } = req.query
     try {
         let response = joinResponsePokemons(await getPokemons(), await getPokemonsDB());
@@ -12,7 +12,8 @@ router.get("/", async (req,res) => {
         if (!response.length || response[0] === null) throw new Error("Oops! :(")
         res.status(200).json(response)
     } catch (error) {
-        res.status(400).json(error)
+        res.status(400).json({error: error.message})
+        next(error)
     }
 })
 
